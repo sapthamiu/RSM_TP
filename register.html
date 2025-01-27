@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="logo"></a>
+        <h1>Register</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Event Calendar</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container form-section">
+            <h2>Register for the Event</h2>
+            <form action="submit_registration.html" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="event">Event Name:</label>
+                <input type="text" id="event" name="name" readonly>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li id="email"><a href="www.gmail.com">email@manipal.edu</a></li>
+                <li id="insta"><a href="www.meta.com">@instagrammer</a></li>
+                <li id="twitter"><a href="www.x.com">@tweeter</a></li>
+            </ul>
+            <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const urlparas = new URLSearchParams(window.location.search);
+        const event = urlparas.get('event');
+        if(event)
+         document.getElementById('event').value = event.charAt(0).toUpperCase()+ event.slice(1);
+    </script>
+</body>
+</html>
