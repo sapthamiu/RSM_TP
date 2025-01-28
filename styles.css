@@ -345,20 +345,25 @@ form button{
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
 }
+form button a{
+    text-decoration: none;
+    
+}
 form button:hover{
     background-color: #000038;
     color: #5ac2fc;
 }
 
+
 /* Confirmation page */
 .confirm_main{
-    background-color: #fbcaef;
+    background-color: #000038;
 }
 .confirm_main h1{
     text-align: center;
     margin-top: 100px;
     font-size: 2.5rem;
-    color: #000038;
+    color: #5ac2fc;
 }
 .confirm_main section{
     text-align: center;
